@@ -1,0 +1,165 @@
+/*---------
+Fonts and sizes
+---------*/
+.font {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 60pt;
+}
+
+#hours_remaining {
+    font-size: 22pt;
+    font-weight: 100;
+}
+
+.task_headings {
+    grid-row: 2 / 3;
+    height: 50px;
+    font-size: 30pt;
+}
+
+.hour_labels {
+    font-size: 26pt;
+    margin: 5px;
+}
+
+button {
+    background-color: white;
+    outline-style: hidden;
+    height: 28px;
+    width: 28px;
+    margin: 5px;
+}
+
+input {
+    height: 30px;
+    width: 65px;
+}
+
+/*---------
+Grid frame for the page
+---------*/
+.grid-container {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 20% 15% auto;
+    gap: 10px;
+    align-content: start;
+    margin: 10px;
+}
+
+#grid-title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+#grid-hours {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+    text-align: center;
+    margin: 10px;
+}
+
+#grid-tasks {
+    grid-column: 1 / end;
+    grid-row: 3 / end;
+    display: grid;
+    grid-template-columns: 22% 25% auto 25% 22%;
+}
+
+#tasksL {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    justify-content: center;
+}
+
+#tasksR {
+    grid-column: 4 / 5;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    justify-content: center;
+}
+
+.task-items {
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.flex-items-tasks {
+    grid-row: 4 / 5;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*---------
+Hour bars for tasks
+---------*/
+#flex-bars {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#health_bar {
+    width: 912px;
+    height: 74px;
+    background-color: #21cccc;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    transition: width 0.5s ease;
+}
+
+#num1_bar {
+    width: 0;
+    height: 74px;
+    background-color: #c5ff2d;
+    transition: width 0.5s ease;
+}
+
+#num2_bar {
+    width: 0;
+    height: 74px;
+    background-color: #ffe330;
+    transition: width 0.5s ease;
+}
+
+#num3_bar {
+    width: 0;
+    height: 74px;
+    background-color: #5d94ff;
+    transition: width 0.5s ease;
+}
+
+#num4_bar {
+    width: 0;
+    height: 74px;
+    background-color: #ff7d7b;
+    transition: width 0.5s ease;
+}
+
+#num5_bar {
+    width: 0;
+    height: 74px;
+    background-color: #ff9dee;
+    transition: width 0.5s ease;
+}
+
+#num6_bar {
+    width: 0;
+    height: 74px;
+    background-color:#21cccc;
+    transition: width 0.5s ease;
+}

@@ -1,0 +1,53 @@
+/*---------
+Fonts and sizes
+---------*/
+.font {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    font-size: 120pt;
+}
+
+h2 {
+    font-size: 35pt;
+}
+
+.text {
+    font-size: 22pt;
+}
+
+button {
+    font-size: 22pt;
+    border-radius: 25px;
+}
+
+/*---------
+Grid frame for the text
+---------*/
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.flex-item {
+    display: flex;
+    height: auto;
+    text-align: center;
+}
+
+
+/*---------
+Bottom padding and Button
+---------*/
+button {
+    background-color: #ffe330;
+    width: 412;
+    height: 73;
+    border: white;
+    padding: 20px;
+    margin: 50px;
+}
