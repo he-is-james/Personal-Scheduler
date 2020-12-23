@@ -72,21 +72,22 @@ Grid frame for the page
     grid-column: 1 / end;
     grid-row: 3 / end;
     display: grid;
-    grid-template-columns: 22% 25% auto 25% 22%;
+    justify-self: center;
+    grid-template-columns: 150px 450px 120px 450px 150px;
 }
 
 #tasksL {
     grid-column: 2 / 3;
     display: grid;
     grid-template-rows: 33% 33% 33%;
-    justify-content: center;
+    justify-content: right;
 }
 
 #tasksR {
     grid-column: 4 / 5;
     display: grid;
     grid-template-rows: 33% 33% 33%;
-    justify-content: center;
+    justify-content: left;
 }
 
 .task-items {
