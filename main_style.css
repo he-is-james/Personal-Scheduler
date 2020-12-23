@@ -25,16 +25,15 @@ button {
 /*---------
 Grid frame for the text
 ---------*/
-.flex-container {
-    display: flex;
-    flex-direction: column;
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 1000px 100px;
     justify-content: center;
-    align-items: center;
     padding: 10px;
 }
 
-.flex-item {
-    display: flex;
+.grid-item {
+    grid-column: 2 / 3;
     height: auto;
     text-align: center;
 }
