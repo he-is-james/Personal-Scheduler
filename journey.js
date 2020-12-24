@@ -10,6 +10,38 @@ let num6_width = 0;
 
 const hoursRemaining = document.querySelector("#hours_remaining");
 
+function type_bar(target) {
+    var value = parseInt(document.getElementById(target).value);
+    console.log(value);
+    if (value > 24 || value < 0 || time_remaining - value < 0) {
+        value = 0;
+    }
+    if (value >= 0 && value <= 24 && time_remaining - value >= 0) {
+        if (target == "num1") {
+            num1_width = value * 38;
+        }
+        else if (target == "num2") {
+            num2_width = value * 38;
+        }
+        else if (target == "num3") {
+            num3_width = value * 38;
+        }
+        else if (target == "num4") {
+            num4_width = value * 38;
+        }
+        else if (target == "num5") {
+            num5_width = value * 38;
+        }
+        else if (target == "num6") {
+            num6_width = value * 38;
+        }
+        health_width = 912 - (num1_width + num2_width + num3_width + num4_width + num5_width + num6_width)
+        time_remaining = health_width / 38;
+        document.getElementById(target + "_bar").style.width = (value * 38) + "px";
+        updateRemaining();
+    }
+}
+
 function increment(target) {
     var value = parseInt(document.getElementById(target).value);
     if (value < 24 && time_remaining > 0) {
@@ -17,7 +49,6 @@ function increment(target) {
         time_remaining -= 1;
         updateBarUp(target);
         health_width -= 38;
-        document.getElementById("health_bar").style.width = health_width.toString() + "px";
         updateRemaining();
         document.getElementById(target).value = value;
     }
@@ -30,7 +61,6 @@ function decrement(target) {
         time_remaining += 1;
         updateBarDown(target);
         health_width += 38;
-        document.getElementById("health_bar").style.width = health_width.toString() + "px";
         updateRemaining();
         document.getElementById(target).value = value;
     }
@@ -38,6 +68,7 @@ function decrement(target) {
 
 function updateRemaining() {
     var h = time_remaining.toString();
+    document.getElementById("health_bar").style.width = health_width.toString() + "px";
     hoursRemaining.innerHTML = "Hours Remaining: " + h;
 }
 
