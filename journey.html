@@ -12,72 +12,6 @@
             <div class="grid-container">
                 <h1 id="grid-title">Tell me about yourself</h1>
 
-                <div id="grid-tasks">
-                    <div id="tasksL">
-                        <div class="task-items">
-                            <p class="task_headings">Class/Work <span class="iconify" data-inline="false" data-icon="ic:baseline-work-outline"></span></p>
-                            <div class="flex-items-tasks">
-                                <button onclick="decrement('num1')">-</button>
-                                <button onclick="increment('num1')">+</button>
-                                <input class="enter_number" id="num1" type="number" value="0"/> 
-                                <p class="hour_labels">Hours</p>
-                            </div>
-
-                        </div>
-                        <div class="task-items">
-                            <p class="task_headings">Homework <span class="iconify" data-inline="false" data-icon="ic:outline-book"></span></p>
-                            <div class="flex-items-tasks">
-                                <button onclick="decrement('num2')">-</button>
-                                <button onclick="increment('num2')">+</button>
-                                <input class="enter_number" id="num2" type="number" value="0" placeholder="Enter a number"/> 
-                                <p class="hour_labels">Hours</p>
-                            </div>
-                        </div>
-                        <div class="task-items">
-                            <p class="task_headings">Sleep <span class="iconify" data-inline="false" data-icon="ic:outline-bedtime"></span></p>
-                            <div class="flex-items-tasks">
-                                <button onclick="decrement('num3')">-</button>
-                                <button onclick="increment('num3')">+</button>
-                                <input class="enter_number" id="num3" type="number" value="0" placeholder="Enter a number"/> 
-                                <p class="hour_labels">Hours</p>  
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="tasksR">
-                        <div class="task-items">
-                            <p class="task_headings">Meals <span class="iconify" data-inline="false" data-icon="ic:outline-fastfood"></span></p>
-                            <div class="flex-items-tasks">
-                                <button onclick="decrement('num4')">-</button>
-                                <button onclick="increment('num4')">+</button>
-                                <input class="enter_number" id="num4" type="number" value="0" placeholder="Enter a number"/> 
-                                <p class="hour_labels">Hours</p>
-                            </div>
-                        </div>
-
-                        <div class="task-items">
-                            <p class="task_headings">Free Time <span class="iconify" data-inline="false" data-icon="ic:baseline-laptop-mac"></p>
-                            <div class="flex-items-tasks">
-                                <button onclick="decrement('num5')">-</button>
-                                <button onclick="increment('num5')">+</button>
-                                <input class="enter_number" id="num5" type="number" value="0" placeholder="Enter a number"/> 
-                                <p class="hour_labels">Hours</p>
-                            </div>
-                        </div>
-
-                        <div class="task-items">
-                            <p class="task_headings">Personal Projects <span class="iconify" data-inline="false" data-icon="mdi:lightbulb-on-outline"></p>
-                            <div class="flex-items-tasks">
-                                <button onclick="decrement('num6')">-</button>
-                                <button onclick="increment('num6')">+</button>
-                                <input class="enter_number" id="num6" type="number" value="0" placeholder="Enter a number"/> 
-                                <p class="hour_labels">Hours</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
                 <div id="grid-hours">
                     <div id="flex-bars">
                         <div id="health_bar"></div>
@@ -90,10 +24,71 @@
                     </div>
                     <p id="hours_remaining">Hours Remaining: 24</p>
                 </div>
-                <script src="journey.js"></script>
+
+                <div id="grid-tasks">
+                    <div id="tasksL">
+                        <div class="task-items">
+                            <p class="task_headings">Class/Work <span class="iconify" data-inline="false" data-icon="ic:baseline-work-outline"></span></p>
+                            <div class="flex-items-tasks">
+                                <button onclick="decrement('num1')">-</button>
+                                <button onclick="increment('num1')">+</button>
+                                <input id="num1" type="text" value="0" onkeypress="type_bar('num1')"/> 
+                                <p class="hour_labels">Hours</p>
+                            </div>
+                        </div>
+                        <div class="task-items">
+                            <p class="task_headings">Homework <span class="iconify" data-inline="false" data-icon="ic:outline-book"></span></p>
+                            <div class="flex-items-tasks">
+                                <button onclick="decrement('num2')">-</button>
+                                <button onclick="increment('num2')">+</button>
+                                <input id="num2" type="text" value="0" onkeypress="type_bar('num2')"/> 
+                                <p class="hour_labels">Hours</p>
+                            </div>
+                        </div>
+                        <div class="task-items">
+                            <p class="task_headings">Sleep <span class="iconify" data-inline="false" data-icon="ic:outline-bedtime"></span></p>
+                            <div class="flex-items-tasks">
+                                <button onclick="decrement('num3')">-</button>
+                                <button onclick="increment('num3')">+</button>
+                                <input id="num3" type="text" value="0" onkeypress="type_bar('num3')"/> 
+                                <p class="hour_labels">Hours</p>  
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="tasksR">
+                        <div class="task-items">
+                            <p class="task_headings">Meals <span class="iconify" data-inline="false" data-icon="ic:outline-fastfood"></span></p>
+                            <div class="flex-items-tasks">
+                                <button onclick="decrement('num4')">-</button>
+                                <button onclick="increment('num4')">+</button>
+                                <input id="num4" type="text" value="0" onkeypress="type_bar('num4')"/> 
+                                <p class="hour_labels">Hours</p>
+                            </div>
+                        </div>
+                        <div class="task-items">
+                            <p class="task_headings">Free Time <span class="iconify" data-inline="false" data-icon="ic:baseline-laptop-mac"></p>
+                            <div class="flex-items-tasks">
+                                <button onclick="decrement('num5')">-</button>
+                                <button onclick="increment('num5')">+</button>
+                                <input id="num5" type="text" value="0" onkeypress="type_bar('num5')"/> 
+                                <p class="hour_labels">Hours</p>
+                            </div>
+                        </div>
+                        <div class="task-items">
+                            <p class="task_headings">Personal Projects <span class="iconify" data-inline="false" data-icon="mdi:lightbulb-on-outline"></p>
+                            <div class="flex-items-tasks">
+                                <button onclick="decrement('num6')">-</button>
+                                <button onclick="increment('num6')">+</button>
+                                <input id="num6" type="text" value="0" onkeypress="type_bar('num6')"/> 
+                                <p class="hour_labels">Hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
        </div>
-       
-       
+
+       <script src="journey.js"></script>
    </body>
 </html>
