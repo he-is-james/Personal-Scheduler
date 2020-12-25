@@ -71,6 +71,9 @@ function decrement(target) {
             count = 0;
         }
     }
+    if (time_remaining == 0) {
+        count += 1;
+    }
     if (count == 0) {
         if (value > time_remaining + 1) {
             document.getElementById(target).value = value - 1;
