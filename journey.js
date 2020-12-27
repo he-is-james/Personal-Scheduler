@@ -60,54 +60,38 @@ function increment(target) {
 
 function decrement(target) {
     var value = parseInt(document.getElementById(target).value);
-    if (value > 0 && value <= 24 && (value <= time_remaining)) {
-        value -= 1;
-        time_remaining += 1;
-        updateBarDown(target);
-        health_width += 38;
-        updateRemaining();
-        document.getElementById(target).value = value;
-        if (value = time_remaining) {
-            count = 0;
-        }
+    if (value > 25) {
+        document.getElementById(target).value = value - 1;
     }
-    if (time_remaining == 0) {
+    else if (value == 25) {
+        value -= 1;
+        document.getElementById(target).value = value;
+        document.getElementById(target + "_bar").style.width = value * 38 + "px";
+        if (target == "num1") {
+            num1_width = value * 38;
+        }
+        else if (target == "num2") {
+            num2_width = value * 38;
+        }
+        else if (target == "num3") {
+            num3_width = value * 38;
+        }
+        else if (target == "num4") {
+            num4_width = value * 38;
+        }
+        else if (target == "num5") {
+            num5_width = value * 38;
+        }
+        else if (target == "num6") {
+            num6_width = value * 38;
+        }
+        health_width = 0;
+        time_remaining = 0;
+        updateRemaining();
+        document.getElementById("health_bar").style.width = "0px";
         count += 1;
     }
-    if (count == 0) {
-        if (value > time_remaining + 1) {
-            document.getElementById(target).value = value - 1;
-        }
-        else if (value == time_remaining + 1) {
-            value -= 1;
-            document.getElementById(target).value = value;
-            document.getElementById(target + "_bar").style.width = value * 38 + "px";
-            if (target == "num1") {
-                num1_width = value * 38;
-            }
-            else if (target == "num2") {
-                num2_width = value * 38;
-            }
-            else if (target == "num3") {
-                num3_width = value * 38;
-            }
-            else if (target == "num4") {
-                num4_width = value * 38;
-            }
-            else if (target == "num5") {
-                num5_width = value * 38;
-            }
-            else if (target == "num6") {
-                num6_width = value * 38;
-            }
-            health_width = 0;
-            time_remaining = 0;
-            updateRemaining();
-            document.getElementById("health_bar").style.width = "0px";
-            count += 1;
-        }
-    }
-    else if (value > time_remaining) {
+    else if (value > 0 && time_remaining < 24) {
         value -= 1;
         time_remaining += 1;
         updateBarDown(target);
